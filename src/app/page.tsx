@@ -3,7 +3,7 @@ import { Button } from "@/src/components/ui/button";
 export default function Home() {
   return (
     <>
-      <>Hello, I'm AIT-Creators</>
+      <div>Hello, I am AIT-Creators</div>
       <p>
         <Button>Click me</Button>
       </p>
