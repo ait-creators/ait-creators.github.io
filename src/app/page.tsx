@@ -1,10 +1,12 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "@/src/app/components/ui/button";
 
 export default function Home() {
   return (
     <>
       <>Hello, I'm AIT-Creators</>
-      <Button>Click me</Button>
+      <p>
+        <Button>Click me</Button>
+      </p>
     </>
   );
 }
