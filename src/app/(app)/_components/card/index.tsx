@@ -3,6 +3,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import React, { useState } from "react";
+import "@/src/app/(app)/_components/card/index.css";
 
 interface CardProps {
   image: string;
@@ -13,7 +14,8 @@ const Card: React.FC<CardProps> = ({ image }) => {
 
   return (
     <motion.div
-      className="relative flex h-[200px] min-w-[300px] items-center justify-center overflow-hidden rounded-xl bg-slate-400 md:h-[400px] md:min-w-[600px]"
+      // eslint-disable-next-line tailwindcss/no-custom-classname
+      className="skewed relative flex h-[200px] min-w-[300px] items-center justify-center overflow-hidden rounded-xl bg-slate-400 md:h-[400px] md:min-w-[600px]"
       onHoverEnd={() => setShowOverlay(false)}
       onHoverStart={() => setShowOverlay(true)}
     >
