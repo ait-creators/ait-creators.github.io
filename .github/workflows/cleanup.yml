@@ -1,21 +1,20 @@
-name: Cleanup Github Pages
+name: Delete Preview Branch
 
 on:
   pull_request:
     types: [closed]
 
 jobs:
-  cleanup:
+  delete-branch:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-      - name: Remove preview branch from gh-pages
+      - name: Delete preview branch
+        if: ${{ github.event.pull_request.merged == false }}
         run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git clone --branch=gh-pages https://github.com/${{ github.repository }} gh-pages
-          cd gh-pages
-          git rm -r ${{ github.event.pull_request.head.ref }}
-          git commit -m "Remove preview for ${{ github.event.pull_request.head.ref }}"
-          git push origin gh-pages
+          PREVIEW_BRANCH="pr-${{ github.event.number }}"
+          gh api -X DELETE "repos/${{ github.repository }}/git/refs/heads/${PREVIEW_BRANCH}"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
