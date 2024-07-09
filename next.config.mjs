@@ -1,4 +1,7 @@
-/** @type {import('next').NextConfig} */
+// next.config.mjs
+
+const { withImages } = require("next-images");
+
 const nextConfig = {
   reactStrictMode: true,
   logging: {
@@ -6,16 +9,8 @@ const nextConfig = {
       fullUrl: true,
     },
   },
-};
-
-export default nextConfig;
-
-const isProd = process.env.NODE_ENV === "production";
-const basePath = isProd ? `/${process.env.GITHUB_REF_NAME}` : "";
-
-module.exports = {
-  basePath: basePath,
-  assetPrefix: basePath,
+  basePath: process.env.NODE_ENV === "production" ? `/${process.env.GITHUB_REF_NAME}` : "",
+  assetPrefix: process.env.NODE_ENV === "production" ? `/${process.env.GITHUB_REF_NAME}` : "",
   images: {
     unoptimized: true,
   },
@@ -29,3 +24,5 @@ module.exports = {
     };
   },
 };
+
+export default nextConfig;
