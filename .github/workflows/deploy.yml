@@ -1,4 +1,4 @@
-name: Deploy to Github Pages
+name: Deploy Preview to Github Pages
 
 on:
   pull_request:
@@ -19,16 +19,25 @@ jobs:
         run: npm install
 
       - name: Build the project
-        run: npm run && npm run export
+        run: npm run build  # or `npm run export` depending on your build process
 
-      - name: Deploy to Github Pages
+      - name: Deploy Preview to Github Pages
         env:
           GITHUB_REF_NAME: ${{ github.event.pull_request.head.ref }}
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./out
-          publish_branch: gh-pages
+          publish_branch: pr-${{ github.event.number }}  # プルリクエスト番号に基づいたブランチ
           user_name: "github-actions[bot]"
           user_email: "github-actions[bot]@users.noreply.github.com"
-          cname: ${{ github.event.pull_request.head.ref }}
+          cname: ""
+
+      - name: Post preview URL comment
+        if: always()
+        run: |
+          PREVIEW_URL="https://your-username.github.io/your-repo-name/pr-${{ github.event.number }}"
+          COMMENT="デプロイプレビューが完了しました。以下のURLでプレビューを確認できます。\n${PREVIEW_URL}"
+          gh pr comment ${{ github.event.pull_request.number }} --body "$COMMENT"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
