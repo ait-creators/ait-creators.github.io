@@ -18,10 +18,10 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head />
       <body
-        className={cn(
+        className={`${cn(
           "min-h-screen bg-background font-sans antialiased",
           fontSans.variable
-        )}
+        )} overflow-x-hidden`}
       >
         <Header />
         {children}
