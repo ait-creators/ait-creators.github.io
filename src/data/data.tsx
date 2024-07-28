@@ -1,4 +1,4 @@
-export const GAME = [
+export const GAMES = [
   {
     title: "Game Title",
     description: "Game Description",
