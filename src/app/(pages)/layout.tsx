@@ -1,6 +1,7 @@
 import { Inter as FontSans } from "next/font/google";
 
 import React from "react";
+import Header from "@/src/app/(pages)/_components/header";
 import { cn } from "@/src/lib/utils";
 
 const fontSans = FontSans({
@@ -22,6 +23,7 @@ export default function RootLayout({
           fontSans.variable
         )} overflow-x-hidden`}
       >
+        <Header />
         {children}
       </body>
     </html>
