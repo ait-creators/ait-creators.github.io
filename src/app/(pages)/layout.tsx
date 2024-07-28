@@ -21,7 +21,7 @@ export default function RootLayout({
         className={`${cn(
           "min-h-screen bg-background font-sans antialiased",
           fontSans.variable
-        )} overflow-x-hidden px-4`}
+        )} px-4`}
       >
         <Header />
         {children}

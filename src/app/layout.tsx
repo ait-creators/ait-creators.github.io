@@ -1,4 +1,4 @@
-import { GoogleAnalytics } from '@next/third-parties/google'
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { Metadata } from "next";
 import "@/src/styles/tailwind.css";
 
@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head />
-      <body>{children}</body>
+      <body className="overflow-x-hidden">{children}</body>
       <GoogleAnalytics gaId="G-EJLW92B540" />
     </html>
   );
