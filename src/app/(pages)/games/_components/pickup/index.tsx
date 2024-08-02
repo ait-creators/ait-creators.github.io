@@ -4,18 +4,18 @@ import { GAMES } from "@/src/data";
 export default function Page() {
   return (
     <>
-      <div className="flex translate-y-0 items-end justify-start lg:translate-y-[-50px]">
-        <h1 className="offside z-10 border-4 border-cyan-500 p-2 text-[4rem] md:text-[6rem]">
-          <span className="neon_blue">PICK UP !</span>
+      <div className="flex items-end justify-start py-5 pt-16 md:pt-32">
+        <h1 className="offside z-10 rounded-xl border-4 border-blue-500 p-2 text-[2rem] md:text-[4rem]">
+          <span className="neon_blue">Pick up !</span>
         </h1>
       </div>
-      <div className="flex w-full justify-around">
+      <div className="grid grid-cols-3 gap-4 gap-y-10 px-7 md:p-10">
         {GAMES.map((game) => {
           if (game.pickup) {
             return (
               <div
                 key={game.id}
-                className="w-1/4 skew-x-[-15deg] rounded-xl border-8 shadow-xl shadow-slate-500"
+                className="skew-x-[-15deg] rounded-xl border-4 shadow-xl shadow-slate-500 md:border-8"
               >
                 <Image
                   alt={game.images[0].alt}
