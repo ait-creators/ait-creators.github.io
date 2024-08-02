@@ -9,11 +9,14 @@ export default function Page() {
           <span className="neon_blue">PICK UP !</span>
         </h1>
       </div>
-      <div className="flex justify-around">
+      <div className="flex w-full justify-around">
         {GAMES.map((game) => {
           if (game.pickup) {
             return (
-              <div key={game.id} className="skew-x-[-15deg] border">
+              <div
+                key={game.id}
+                className="w-1/4 skew-x-[-15deg] rounded-xl border-8 shadow-xl shadow-slate-500"
+              >
                 <Image
                   alt={game.images[0].alt}
                   height={200}
