@@ -17,12 +17,14 @@ export default function Page() {
                 key={game.id}
                 className="skew-x-[-15deg] rounded-xl border-4 shadow-xl shadow-slate-500 md:border-8"
               >
-                <Image
-                  alt={game.images[0].alt}
-                  height={200}
-                  src={game.images[0].src}
-                  width={200}
-                />
+                <div className="flex justify-center">
+                  <Image
+                    alt={game.images[0].alt}
+                    height={200}
+                    src={game.images[0].src}
+                    width={200}
+                  />
+                </div>
                 <h2 className="flex justify-center">{game.title}</h2>
               </div>
             );
