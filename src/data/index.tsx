@@ -1,4 +1,6 @@
-export const GAMES = [
+import { Game } from "@/src/lib/types";
+
+export const GAMES: Game[] = [
   {
     id: 1,
     title: "Game Title1",
