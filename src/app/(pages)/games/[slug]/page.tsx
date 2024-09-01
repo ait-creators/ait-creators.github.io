@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { useParams } from "next/navigation";
 import Content from "./_components/content";
 import Gallery from "./_components/gallery";
@@ -12,7 +11,7 @@ export default function Page() {
   const params = useParams();
 
   return (
-    <>
+    <div className="px-4">
       <Header />
       {GAMES.map((game) => {
         // このロジックはGptによって生成
@@ -35,12 +34,6 @@ export default function Page() {
 
         return null;
       })}
-      <button
-        className="fixed bottom-4 right-4 rounded-xl bg-white p-2 text-black"
-        type="button"
-      >
-        <Link href="/games">戻る</Link>
-      </button>
-    </>
+    </div>
   );
 }

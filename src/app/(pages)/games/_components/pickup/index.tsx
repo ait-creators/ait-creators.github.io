@@ -10,7 +10,7 @@ export default function Page() {
           <span className="neon_blue">Pick up !</span>
         </h1>
       </div>
-      <div className="grid grid-cols-3 gap-4 gap-y-10 px-7 md:p-10">
+      <div className="mx-3 grid grid-cols-3 gap-4 gap-y-10 px-7 lg:mx-40">
         {GAMES.map((game) => {
           if (game.pickup) {
             return (
@@ -22,9 +22,9 @@ export default function Page() {
                   <div className="flex justify-center">
                     <Image
                       alt={game.images[0].alt}
-                      height={200}
+                      height={1080}
                       src={game.images[0].src}
-                      width={200}
+                      width={1920}
                     />
                   </div>
                   <h2 className="flex justify-center">{game.title}</h2>

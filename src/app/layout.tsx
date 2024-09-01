@@ -1,7 +1,6 @@
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { Metadata } from "next";
 import "@/src/styles/tailwind.css";
-
 import React from "react";
 
 export const metadata: Metadata = {
@@ -17,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head />
-      <body className="overflow-x-hidden">{children}</body>
+      <body>{children}</body>
       <GoogleAnalytics gaId="G-EJLW92B540" />
     </html>
   );

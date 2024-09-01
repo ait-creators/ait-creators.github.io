@@ -2,6 +2,7 @@ import { Inter as FontSans } from "next/font/google";
 
 import React from "react";
 import Header from "@/src/app/(app)/_components/header";
+import Menu from "@/src/components/menu";
 import { cn } from "@/src/lib/utils";
 
 const fontSans = FontSans({
@@ -21,10 +22,11 @@ export default function RootLayout({
         className={`${cn(
           "min-h-screen bg-background font-sans antialiased",
           fontSans.variable
-        )}`}
+        )} overflow-x-hidden`}
       >
         <Header />
         {children}
+        <Menu />
       </body>
     </html>
   );

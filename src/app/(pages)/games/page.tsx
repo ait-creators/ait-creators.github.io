@@ -4,7 +4,7 @@ import Pickup from "./_components/pickup";
 
 export default function Page() {
   return (
-    <div>
+    <div className="px-4">
       <Header />
       <Pickup />
       <All />

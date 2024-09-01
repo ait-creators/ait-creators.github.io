@@ -17,7 +17,7 @@ body {
     rgb(var(--background-start-rgb)),
     rgb(var(--background-end-rgb))
   );
-  padding: 0 1rem;
+  padding: 0;
 }
 
 @layer utilities {
@@ -58,4 +58,15 @@ body {
     0 0 90px #ee7800,
     0 0 100px #ee7800,
     0 0 150px #ee7800;
+}
+.flow::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 4px;
+  background: #ee7800;
+  transition: width 0.3s;
+}
+.flow:hover::after {
+  width: 100%;
 }
