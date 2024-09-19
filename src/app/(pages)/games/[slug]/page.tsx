@@ -1,37 +1,12 @@
-"use client";
-
-import { useParams } from "next/navigation";
-import Content from "./_components/content";
-import Gallery from "./_components/gallery";
-import Header from "./_components/header";
-import Title from "./_components/title";
+import Data from "./_components/getdata";
 import { GAMES } from "@/src/data";
 
+export async function generateStaticParams() {
+  return GAMES.map((game) => ({
+    slug: game.id.toString(),
+  }));
+}
+
 export default function Page() {
-  const params = useParams();
-
-  return (
-    <div className="px-4">
-      <Header />
-      {GAMES.map((game) => {
-        if (
-          game.id ===
-          parseInt(
-            Array.isArray(params.slug) ? params.slug[0] : params.slug,
-            10
-          )
-        ) {
-          return (
-            <div key={game.id}>
-              <Title game={game} />
-              <Gallery game={game} />
-              <Content game={game} />
-            </div>
-          );
-        }
-
-        return null;
-      })}
-    </div>
-  );
+  return <Data />;
 }
