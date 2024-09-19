@@ -14,7 +14,6 @@ export default function Page() {
     <div className="px-4">
       <Header />
       {GAMES.map((game) => {
-        // このロジックはGptによって生成
         if (
           game.id ===
           parseInt(
@@ -26,7 +25,6 @@ export default function Page() {
             <div key={game.id}>
               <Title game={game} />
               <Gallery game={game} />
-
               <Content game={game} />
             </div>
           );
