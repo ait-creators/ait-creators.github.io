@@ -16,6 +16,9 @@ export default function Page() {
         <div className="translate-y-[690px]">
           <Carousel />
         </div>
+        <div className="translate-y-[910px]">
+          <Carousel />
+        </div>
       </div>
     </div>
   );

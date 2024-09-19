@@ -10,10 +10,10 @@ import { GAMES } from "@/src/data";
 // GAMESの配列をそのまま使用
 const games = [...GAMES];
 
-// 配列をシャッフルする関数
+//  表示するゲームの画像の配列をシャッフルする関数
 const shuffleArray = (array: typeof games) => {
   const newArray = [...array];
-  for (let i = newArray.length - 1; i > 0; i = -1) {
+  for (let i = newArray.length - 1; i > 0; i -= 1) {
     const j = Math.floor(Math.random() * (i + 1));
     [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
   }
