@@ -1,3 +1,5 @@
+"use client";
+
 import { Game } from "@/src/lib/types";
 
 export default function Content({ game }: { game: Game }) {

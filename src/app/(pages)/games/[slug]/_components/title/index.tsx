@@ -1,3 +1,5 @@
+"use client";
+
 import "@/src/styles/tailwind.css";
 
 export default function Page({ game }: { game: { title: string } }) {
