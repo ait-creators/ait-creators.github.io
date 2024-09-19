@@ -87,9 +87,8 @@ body {
 
 .double-border {
   position: relative;
-  font-size: 2rem;
   display: inline-block;
-  padding: 4rem;
+  padding: 3rem;
   border: 5px solid; /* 内側のborder */
   border-image: linear-gradient(
       to right,

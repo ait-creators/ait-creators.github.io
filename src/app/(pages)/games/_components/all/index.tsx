@@ -5,12 +5,12 @@ import { GAMES } from "@/src/data";
 export default function Page() {
   return (
     <>
-      <div className="flex items-end justify-start py-5 pt-16 md:pt-32">
+      <div className="flex items-end justify-start py-5">
         <h1 className="offside rounded-xl border-4 border-orange-500 p-2 text-[2rem] md:text-[4rem]">
           <span className="neon_orange">All !</span>
         </h1>
       </div>
-      <div className="mx-3 grid grid-cols-3 gap-4 gap-y-10 px-7 lg:mx-40">
+      <div className="mx-3 grid grid-cols-2 gap-4 gap-y-10 px-7 md:grid-cols-3 lg:mx-40">
         {GAMES.map((game) => {
           return (
             <div

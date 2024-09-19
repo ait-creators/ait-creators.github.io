@@ -3,19 +3,13 @@ import Carousel from "./_components/carousel";
 export default function Page() {
   return (
     <div>
-      <div>
+      <div className="translate-y-0 md:translate-y-0">
         <Carousel />
       </div>
-      <div className="translate-y-[250px] md:translate-y-[500px]">
+      <div className="translate-y-[230px] md:translate-y-[430px]">
         <Carousel />
       </div>
-      <div className="translate-y-[500px] md:translate-y-[1000px]">
-        <Carousel />
-      </div>
-      <div className="block translate-y-[750px] md:hidden">
-        <Carousel />
-      </div>
-      <div className="block translate-y-[1000px] md:hidden">
+      <div className="translate-y-[460px] md:translate-y-[860px]">
         <Carousel />
       </div>
     </div>
