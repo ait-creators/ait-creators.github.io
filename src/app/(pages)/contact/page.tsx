@@ -6,16 +6,16 @@ export default function Page() {
   return (
     <>
       <Header />
-      <div className="flex size-full justify-center px-4">
-        <ul className="offside mt-8 text-center text-4xl">
+      <div className="flex size-full items-center justify-center px-4">
+        <ul className="offside mt-8 text-center text-base md:text-4xl">
           <li>氏名</li>
-          <li className="pt-8">E-mail</li>
-          <li className="pt-8">問い合わせ内容・詳細</li>
-          <li className="pt-16">
+          <li className="pt-4 md:pt-16">E-mail</li>
+          <li className="pt-4 md:pt-16">問い合わせ内容・詳細</li>
+          <li className="pt-4 md:pt-16">
             これらの内容を記載の上、各種SNSアカウントにてお問い合わせください。
           </li>
           <li>
-            <div className="mt-16 flex justify-around">
+            <div className="mt-8 flex justify-around md:mt-16">
               <Link href="https://x.com/ait_creators" target="_blank">
                 <Image
                   alt="X"

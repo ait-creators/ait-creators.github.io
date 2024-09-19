@@ -21,7 +21,7 @@ export default function Page() {
             left: 0,
           }}
         >
-          <div className="double-border text-[1rem] md:text-[3rem]">
+          <div className="double-border text-base md:text-3xl">
             『BeCreAIT』(ビックリエイト)は愛知工業大学の学生が
             <br />
             ＜TOKYO GAME SHOW＞に出展するゲームを制作するために集結したチーム。

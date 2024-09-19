@@ -10,7 +10,7 @@ export default function Page() {
           <span className="neon_blue">Pick up !</span>
         </h1>
       </div>
-      <div className="mx-3 grid grid-cols-3 gap-4 gap-y-10 px-7 lg:mx-40">
+      <div className="mx-3 grid grid-cols-2 gap-4 gap-y-10 px-7 md:grid-cols-3 lg:mx-40">
         {GAMES.map((game) => {
           if (game.pickup) {
             return (
