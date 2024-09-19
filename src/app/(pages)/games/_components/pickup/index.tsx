@@ -6,7 +6,7 @@ export default function Page() {
   return (
     <>
       <div className="flex items-end justify-start py-5 ">
-        <h1 className="offside z-10 rounded-xl border-4 border-blue-500 p-2 text-[2rem] md:text-[4rem]">
+        <h1 className="offside rounded-xl border-4 border-blue-500 p-2 text-[2rem] md:text-[4rem]">
           <span className="neon_blue">Pick up !</span>
         </h1>
       </div>
