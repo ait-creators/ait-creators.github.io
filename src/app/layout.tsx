@@ -1,7 +1,6 @@
-import { GoogleAnalytics } from '@next/third-parties/google'
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { Metadata } from "next";
 import "@/src/styles/tailwind.css";
-
 import React from "react";
 
 export const metadata: Metadata = {

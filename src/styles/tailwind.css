@@ -17,6 +17,7 @@ body {
     rgb(var(--background-start-rgb)),
     rgb(var(--background-end-rgb))
   );
+  padding: 0;
 }
 
 @layer utilities {
@@ -44,6 +45,20 @@ body {
     0 0 150px #0ff;
 }
 
+.neon_blue2 {
+  background: transparent;
+  color: rgb(25, 0, 255);
+  letter-spacing: 4px;
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 40px rgb(25, 0, 255),
+    0 0 80px rgb(25, 0, 255),
+    0 0 90px rgb(25, 0, 255),
+    0 0 150px rgb(25, 0, 255);
+}
+
 .neon_orange {
   background: transparent;
   color: #333;
@@ -57,4 +72,61 @@ body {
     0 0 90px #ee7800,
     0 0 100px #ee7800,
     0 0 150px #ee7800;
+}
+.flow::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 4px;
+  background: #ee7800;
+  transition: width 0.3s;
+}
+.flow:hover::after {
+  width: 100%;
+}
+
+.double-border {
+  position: relative;
+  font-size: 2rem;
+  display: inline-block;
+  padding: 4rem;
+  border: 5px solid; /* 内側のborder */
+  border-image: linear-gradient(
+      to right,
+      red,
+      orange,
+      yellow,
+      green,
+      blue,
+      indigo,
+      violet
+    )
+    1;
+  z-index: 1;
+  box-sizing: border-box; /* borderを含めたサイズを計算 */
+}
+
+.double-border::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  border: 5px solid; /* 外側のborder */
+  border-image: linear-gradient(
+      to right,
+      violet,
+      indigo,
+      blue,
+      green,
+      yellow,
+      orange,
+      red
+    )
+    1;
+  transform: translate(-25px, -25px); /* 少しずらして2重枠線効果 */
+  z-index: -1;
+  box-sizing: border-box; /* borderを含めたサイズを計算 */
 }
