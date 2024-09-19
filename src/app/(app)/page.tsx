@@ -12,14 +12,6 @@ export default function Page() {
       <div className="translate-y-[460px] md:translate-y-[860px]">
         <Carousel />
       </div>
-      <div className="block md:hidden">
-        <div className="translate-y-[690px]">
-          <Carousel />
-        </div>
-        <div className="translate-y-[910px]">
-          <Carousel />
-        </div>
-      </div>
     </div>
   );
 }

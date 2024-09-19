@@ -11,7 +11,7 @@ export default function Data() {
   const params = useParams();
 
   return (
-    <div className="px-4">
+    <div className="px-4 pb-20 md:pb-0">
       <Header />
       {GAMES.map((game) => {
         if (

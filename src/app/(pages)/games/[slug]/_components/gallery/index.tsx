@@ -6,7 +6,7 @@ import { Game } from "@/src/lib/types";
 
 export default function Gallery({ game }: { game: Game }) {
   return (
-    <div className="mx-3 grid grid-cols-3 gap-4 gap-y-10 p-10 lg:mx-40">
+    <div className="mx-3 grid grid-cols-2 gap-4 gap-y-10 p-10 md:grid-cols-3 lg:mx-40">
       {game.images.map((image: { src: string; alt: string }) => (
         <div
           key={image.src}
