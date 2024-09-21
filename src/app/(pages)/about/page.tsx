@@ -2,10 +2,10 @@ import Header from "./_components/header";
 
 export default function Page() {
   return (
-    <div className="offside overflow-x-hidden px-4 pt-10">
+    <div className="offside overflow-x-hidden px-4 pt-0 md:pt-10">
       <Header />
       <div
-        className="mx-auto mt-20 flex w-fit items-start justify-center"
+        className="mx-auto mt-10 flex w-fit items-start justify-center md:mt-20"
         style={{
           backgroundImage: "url('/icon.png')",
           backgroundSize: "contain",
@@ -21,10 +21,9 @@ export default function Page() {
             left: 0,
           }}
         >
-          <div className="double-border text-base md:text-3xl">
-            『BeCreAIT』(ビックリエイト)は愛知工業大学の学生が
-            <br />
-            ＜TOKYO GAME SHOW＞に出展するゲームを制作するために集結したチーム。
+          <div className="double-border mb-20 text-base md:mb-0 md:text-3xl">
+            『BeCreAIT』(ビックリエイト)は愛知工業大学の学生が＜TOKYO GAME
+            SHOW＞に出展するゲームを制作するために集結したチーム。
             <br />
             <br />
             「Be」+「Create」+「AIT」
