@@ -9,7 +9,7 @@ export default function Page() {
           <span className="neon_orange rotate-12">!</span>
         </h1>
       </div>
-      <div className="absolute inset-x-0 -translate-y-7 md:-translate-y-14">
+      <div className="absolute inset-x-[-20px] -translate-y-7 md:-translate-y-14">
         <div className="border-t-4 border-yellow-200 p-0.5 md:border-t-8 md:p-1" />
         <div className="border-t-4 border-yellow-200 md:border-t-8" />
       </div>

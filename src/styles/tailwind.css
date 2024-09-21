@@ -61,7 +61,7 @@ body {
 
 .neon_orange {
   background: transparent;
-  color: #333;
+  color: #ee7800;
   letter-spacing: 4px;
   text-shadow:
     0 0 5px #fff,
@@ -73,12 +73,24 @@ body {
     0 0 100px #ee7800,
     0 0 150px #ee7800;
 }
+
+.neon_border_orange {
+  background: transparent;
+  color: #ee7800;
+  border: 2px solid #ee7800;
+  box-shadow:
+    0 0 5px #ee7800,
+    0 0 10px #fff,
+    0 0 20px #ee7800,
+    0 0 40px #ee7800;
+}
+
 .flow::after {
   content: "";
   display: block;
   width: 0;
   height: 4px;
-  background: #ee7800;
+  background: #fff;
   transition: width 0.3s;
 }
 .flow:hover::after {

@@ -6,11 +6,11 @@ export default function Page() {
   return (
     <>
       <div className="flex items-end justify-start py-5">
-        <h1 className="offside rounded-xl border-4 border-orange-500 p-2 text-[2rem] md:text-[4rem]">
+        <h1 className="offside neon_border_orange border-4 border-orange-500 p-2 text-[2rem] font-bold md:text-[4rem]">
           <span className="neon_orange">All !</span>
         </h1>
       </div>
-      <div className="mx-3 grid grid-cols-2 gap-4 gap-y-10 px-7 md:grid-cols-3 lg:mx-40">
+      <div className="mx-3 grid grid-cols-2 gap-4 gap-y-10 px-2 md:grid-cols-3 md:px-7 lg:mx-40">
         {GAMES.map((game) => {
           return (
             <div
@@ -26,7 +26,9 @@ export default function Page() {
                     width={1920}
                   />
                 </div>
-                <h2 className="flex justify-center">{game.title}</h2>
+                <h2 className="flex justify-center text-xs font-semibold md:text-4xl">
+                  {game.title}
+                </h2>
               </Link>
             </div>
           );
