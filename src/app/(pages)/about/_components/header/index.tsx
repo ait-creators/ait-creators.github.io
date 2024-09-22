@@ -4,12 +4,12 @@ import Image from "next/image";
 export default function Page() {
   return (
     <>
-      <div className="offside block text-[4rem] md:text-[8rem] lg:hidden">
+      <div className="offside block text-[4rem] lg:hidden">
         <span className="neon_blue2 border-b-4 border-yellow-200 text-white">
           ABOUT
         </span>
       </div>
-      <div className="hidden lg:block">
+      <div className="hidden pb-12 lg:block">
         <span className="neon_blue2 text-[8rem] text-white">ABOUT</span>
         <br />
         <div className="my-[-80px] flex items-center">
